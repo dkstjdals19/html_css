@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html, body {
+  <meta charset="UTF-8">
+  <style>
+    html, body {
       height: 100%;
       margin: 0;
       display: flex;
-      justify-content: center;  /* 가로 중앙 */
-      align-items: center;      /* 세로 중앙 */
+      justify-content: center;
+      align-items: center;
     }
 
     .outer-box {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      width: 400px;
-      height: 400px;
+      width: 400px;                /* 고정 크기 추천! */
+      height: 300px;
       background-color: lightgreen;
       border-radius: 30px;
     }
@@ -28,18 +25,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
       width: 50%;
       height: 50%;
       background: blueviolet;
       color: white;
     }
-    </style>
+  </style>
 </head>
 <body>
-    <div class="outer-box">
-        <div class="inner-box">진짜 중앙!</div>
-      </div>
-    
+  <div class="outer-box">
+    <div class="inner-box">진짜 중앙!</div>
+  </div>
 </body>
 </html>

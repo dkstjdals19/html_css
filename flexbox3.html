@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing:border-box;
+        }
+        .flex-box{
+            display:flex;
+            flex-wrap:wrap;
+            gap: 20px;
+        }
+        .box{
+            width:150px;
+            height:150px;
+            background:yellowgreen;
+        }
+        /* 800px 이하에서 2개씩 배치 */
+        @media (max-width: 800px) {
+            .box {
+                width: calc(50% - 10px); /* 두 개씩 배치되도록 크기 조정 */
+            }
+        }
+
+        /* 575px 이하에서 1개씩 배치 */
+        @media (max-width: 575px) {
+            .box {
+                width: calc(100% - 10px); /* 한 개씩 배치되도록 크기 조정 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 데스크톱 화면 : 4개가 모두 가로로 배치(1줄) -->
+    <!-- 태블릿 화면 : 2개씩 가로로 배치(2줄) -->
+    <!-- 모바일 화면 : 1개씩 가로로 배치(4줄) -->
+    <div class="container">
+        <div class="flex-box">
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
